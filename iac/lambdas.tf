@@ -8,6 +8,10 @@ module "get-data-lambda" {
 }
 
 module "create-data-lambda" {
-  source = "./modules/lambda"
-  name   = "create-data"
+  source  = "./modules/lambda"
+  name    = "create-data"
+  polices = [data.aws_iam_policy_document.create_data_in_dynamodb.json]
+  environment_variables = {
+    TABLE_NAME = aws_dynamodb_table.data.name
+  }
 }
