@@ -22,7 +22,7 @@ resource "aws_dynamodb_table_item" "first_data" {
   })
 }
 
-resource "aws_dynamodb_table_item" "first_data" {
+resource "aws_dynamodb_table_item" "second_data" {
   table_name = aws_dynamodb_table.data.name
   hash_key   = aws_dynamodb_table.data.hash_key
   range_key  = aws_dynamodb_table.data.range_key
@@ -33,7 +33,7 @@ resource "aws_dynamodb_table_item" "first_data" {
   })
 }
 
-resource "aws_dynamodb_table_item" "first_data" {
+resource "aws_dynamodb_table_item" "third_data" {
   table_name = aws_dynamodb_table.data.name
   hash_key   = aws_dynamodb_table.data.hash_key
   range_key  = aws_dynamodb_table.data.range_key
