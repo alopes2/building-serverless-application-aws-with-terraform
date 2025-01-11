@@ -1,11 +1,11 @@
-import { DocumentDBClient } from '@aws-sdk/client-dynamodb';
-import { DocumentDBDocumentClient, PutCommand } from '@aws-sdk/lib-dynamodb';
+import { DynamoDBClient } from '@aws-sdk/client-dynamodb';
+import { DynamoDBDocumentClient, PutCommand } from '@aws-sdk/lib-dynamodb';
 import { randomUUID } from 'crypto';
 
 const tableName = process.env.TABLE_NAME;
 
-const client = new DocumentDBClient({});
-const docClient = DocumentDBDocumentClient.from(client);
+const client = new DynamoDBClient({});
+const docClient = DynamoDBDocumentClient.from(client);
 
 export const handler = async (event) => {
   let body;
