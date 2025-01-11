@@ -41,4 +41,4 @@ jobs:
         run: cd build && zip -r ../main.zip .
 
       - name: Update Lambda Code
-        run: aws lambda update-function-code --function-name=new-create-data --zip-file=fileb://main.zip
+        run: aws lambda update-function-code --function-name=create-data --zip-file=fileb://main.zip
