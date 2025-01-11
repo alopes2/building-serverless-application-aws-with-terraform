@@ -43,3 +43,4 @@ resource "aws_dynamodb_table_item" "third_data" {
     Data = { S = "My Third Data" }
   })
 }
+
