@@ -10,9 +10,12 @@ const docClient = DynamoDBDocumentClient.from(client);
 export const handler = async (event) => {
   let body;
 
+  console.log('event', event);
+
   try {
     body = JSON.parse(event.body);
-  } catch {
+  } catch (error) {
+    console.log(error);
     return {
       statusCode: 500,
       body: 'Body missing/wrong',
