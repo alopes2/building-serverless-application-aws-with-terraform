@@ -18,6 +18,8 @@ data "archive_file" "lambda" {
 }
 
 data "aws_iam_policy_document" "lambda_policies" {
+  override_policy_documents = var.polices
+
   statement {
     effect = "Allow"
 

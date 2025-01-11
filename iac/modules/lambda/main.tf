@@ -4,6 +4,9 @@ resource "aws_lambda_function" "lambda" {
   handler       = "index.handler"
   runtime       = "nodejs22.x"
   role          = aws_iam_role.lambda_role.arn
+  environment {
+    variables = var.environment_variables
+  }
 }
 
 resource "aws_iam_role" "lambda_role" {
